@@ -3,11 +3,11 @@ var chai = require('chai');
 var mocha = require('gulp-mocha');
 var karma = require('karma');
 
-gulp.task('default',["unittest"],function(){
+gulp.task('default',["unit"],function(){
 	console.log('My Default Task');
 })
 
-gulp.task('unittest', ["karma"],function() {
+gulp.task('unit', ["karma"],function() {
 	console.log('Run Unit Test With Mocha');
   return gulp.src(['test/*.test.js'], { read: false })
     .pipe(mocha({
