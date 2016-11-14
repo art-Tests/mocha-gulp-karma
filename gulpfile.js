@@ -15,8 +15,8 @@ gulp.task('unit', ["karma"],function() {
       reporterOptions: {
         //reportDir: 'report',
         reportName: 'UnitTestReport',
-        reportTitle: 'UnitTestReport',
-        inlineAssets: true
+        reportTitle: 'UnitTestReport'
+        //inlineAssets: true
       },
       globals: {
         should: require('chai')
