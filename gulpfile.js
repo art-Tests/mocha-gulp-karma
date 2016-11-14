@@ -13,7 +13,7 @@ gulp.task('unit', ["karma"],function() {
     .pipe(mocha({
       reporter: 'mochawesome',
       reporterOptions: {
-        //reportDir: 'report',
+        reportDir: 'report',
         reportName: 'UnitTestReport',
         reportTitle: 'UnitTestReport'
         //inlineAssets: true

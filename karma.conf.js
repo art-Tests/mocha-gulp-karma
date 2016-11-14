@@ -39,10 +39,20 @@ module.exports = function(config) {
 		  'karma-coverage'
 	  ],
 
-	  overageReporter: {
+	  coverageReporter: {
 		  // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
-		  type: 'lcov',
-		  dir: 'coverage/'
+		  //type: 'lcov',
+		  dir: 'report',
+          subdir: function(browser){
+            return 'converage/'+browser.toLowerCase().split(/[ /-]/)[0];
+          },
+          watermarks: {
+            statements: [ 50, 75 ],
+            functions: [ 50, 75 ],
+            branches: [ 50, 75 ],
+            lines: [ 50, 75 ]
+          }
+          // Would output the results into: './coverage/firefox/'
 	  },
     // test results reporter to use
     // possible values: 'dots', 'progress'
