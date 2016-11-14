@@ -12,6 +12,12 @@ gulp.task('unit', ["karma"],function() {
   return gulp.src(['test/*.test.js'], { read: false })
     .pipe(mocha({
       reporter: 'mochawesome',
+      reporterOptions: {
+        //reportDir: 'report',
+        reportName: 'UnitTestReport',
+        reportTitle: 'UnitTestReport',
+        inlineAssets: true
+      },
       globals: {
         should: require('chai')
       }
